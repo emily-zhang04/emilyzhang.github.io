@@ -16,25 +16,6 @@
     <link rel="stylesheet" href="styles/main.css" />
 </head>
 
-<script>
-  const nav = document.querySelector('.nav');
-  const btn = document.querySelector('.nav__toggle');
-  const links = document.querySelectorAll('.nav__links a');
-
-  btn.addEventListener('click', () => {
-    const isOpen = nav.classList.toggle('nav--open');
-    btn.setAttribute('aria-expanded', isOpen);
-    btn.textContent = isOpen ? '✕' : '☰';
-  });
-
-  links.forEach(a => a.addEventListener('click', () => {
-    nav.classList.remove('nav--open');
-    btn.setAttribute('aria-expanded', 'false');
-    btn.textContent = '☰';
-  }));
-</script>
-
-
 <body>
     <!-- Top ribbon -->
     <div class="ribbon">
@@ -43,25 +24,18 @@
 
     <!-- Header -->
     <header class="header">
-  <nav class="nav">
-    <a class="brand" href="#">Emily Zhang</a>
+        <nav class="nav">
+            <a class="brand" href="#">Emily Zhang</a>
 
-    <!-- Mobile menu button -->
-    <button class="nav__toggle" aria-expanded="false" aria-controls="navLinks">
-      <span class="sr-only">Open menu</span>
-      ☰
-    </button>
-
-    <ul id="navLinks" class="nav__links">
-      <li><a href="#intro">Introduction</a></li>
-      <li><a href="#work">Resume</a></li>
-      <li><a href="#writing">Course Work</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact" class="nav__cta">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-
+            <ul class="nav__links">
+                <li><a href="#intro">Introduction</a></li>
+                <li><a href="#work">Resume</a></li>
+                <li><a href="#writing">Course Work</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact" class="nav__cta">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <!-- Hero: split editorial layout -->
     <main class="hero" id="intro">
